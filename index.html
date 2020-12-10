@@ -17,37 +17,37 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <nav>
+    <nav class="banner">
         <a href="index.html">Home</a>
         <a href="index2.html">Transactions</a>
     </nav>
         
     <h1>Budget Buddies</h1>
 
-    <div>       
+    <div class="budget">       
         <label>Let's start tracking your budget</label>    
         <form>
-            <input type="number" placeholder ="Weekly Budget"/>
-            <button class="submit"> Submit</button>
+            <input class="input", id="newbudget" type="number" placeholder ="Weekly Budget"/>
+            <button class="submit", id="budget"> Save Budget </button>
         </form>
         
     </div>
 
-    <div class="Purchase">
+    <div class="purchase">
         <label> Enter new Purchases </label>
 
         <form>
-            <input type="text" placeholder ="Purchase Name" required/>
-            <input type="text" placeholder ="Purchase Description"/>
-            <input type="number" placeholder ="Purchase Amount" required/>
-            <input type="date" placeholder ="Purchase Date" required/>
+            <input class="input" type="text" placeholder ="Purchase Name" required/>
+            <input class="input" type="text" placeholder ="Purchase Description"/>
+            <input class="input" type="number" placeholder ="Purchase Amount" required/>
+            <input class="input" type="date" placeholder ="Purchase Date" required/>
             <select>
                 <option>Food</option>
                 <option>Entertainment</option>
                 <option selected="">Bills</option>
                 <option>Clothing</option>
             </select>
-            <button class="submit"> Submit</button>
+            <button class="submit"> Add Purchase </button>
         </form>
     </div>
 
