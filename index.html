@@ -1,4 +1,4 @@
-html5 <!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -7,7 +7,7 @@ html5 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Group 3 Budget Buddies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
@@ -17,8 +17,53 @@ html5 <!DOCTYPE html>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1> Budget Buddies</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index2.html">Transactions</a>
+    </nav>
         
-        <script src="scripts.js" async defer></script>
+    <h1>Budget Buddies</h1>
+
+    <div>       
+        <label>Let's start tracking your budget</label>    
+        <form>
+            <input type="number" placeholder ="Weekly Budget"/>
+            <button class="submit"> Submit</button>
+        </form>
+        
+    </div>
+
+    <div class="Purchase">
+        <label> Enter new Purchases </label>
+
+        <form>
+            <input type="text" placeholder ="Purchase Name" required/>
+            <input type="text" placeholder ="Purchase Description"/>
+            <input type="number" placeholder ="Purchase Amount" required/>
+            <input type="date" placeholder ="Purchase Date" required/>
+            <select>
+                <option>Food</option>
+                <option>Entertainment</option>
+                <option selected="">Bills</option>
+                <option>Clothing</option>
+            </select>
+            <button class="submit"> Submit</button>
+        </form>
+    </div>
+
+    <p id="Weekly-Budget"></p>
+    <p id="Balance"></p>
+    <p id="Purchases"></p>
+    
+    <div class="Progress Bar">
+    
+    </div>
+
+    <div class="ListingByCategories">
+
+
+    </div>
+    
+    <script src="script.js" async defer></script>
     </body>
 </html>
