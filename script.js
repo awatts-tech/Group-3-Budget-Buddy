@@ -22,18 +22,14 @@ function saveBudget(e)
 document.querySelector("#purchase").addEventListener("click", purchases);
 
 let purchaseName = document.querySelector("#name");
-
 let purchaseDescription = document.querySelector("#description");
-
 let purchasePrice = document.querySelector("#amount");
-
 let purchaseDate = document.querySelector("#date");
-
 let purchaseCategory = document.querySelector("#category");
+let purchaseList = document.querySelector("#purchase-list"); 
 
 // Charissa will work on completing this function
-function purchases(e)
-{
+function purchases(e){
     e.preventDefault();
     let addPurchase = {
         purchase: purchaseName.value,
@@ -42,7 +38,11 @@ function purchases(e)
         date: purchaseDate.value,
         category: purchaseCategory.value,
     };
-    console.log(addPurchase);
+    let addNewPurchase = document.createElement('p'); 
+    addNewPurchase.innerText = addPurchase.purchase + ' : $' + addPurchase.amount + " " + addPurchase.date; 
+    purchaseList.append(addNewPurchase);
+   console.log(addNewPurchase); 
+
     
 }
 
