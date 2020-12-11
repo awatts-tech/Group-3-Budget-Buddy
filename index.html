@@ -37,23 +37,27 @@
         <label> Enter new Purchases </label>
 
         <form>
-            <input class="input" type="text" placeholder ="Purchase Name" required/>
-            <input class="input" type="text" placeholder ="Purchase Description"/>
-            <input class="input" type="number" placeholder ="Purchase Amount" required/>
-            <input class="input" type="date" placeholder ="Purchase Date" required/>
-            <select>
+            <input class="input", id="name" type="text" placeholder ="Purchase Name" required/>
+            <input class="input", id="description" type="text" placeholder ="Purchase Description"/>
+            <input class="input", id="amount" type="number" placeholder ="Purchase Amount" required/>
+            <input class="input", id="date" type="date" placeholder ="Purchase Date" required/>
+            <select id="category">
                 <option>Food</option>
                 <option>Entertainment</option>
                 <option selected="">Bills</option>
                 <option>Clothing</option>
             </select>
-            <button class="submit"> Add Purchase </button>
+            <button class="submit", id="purchase"> Add Purchase </button>
         </form>
     </div>
 
+    <label>My Budget</label> 
     <p id="Weekly-Budget"></p>
+
+    <!-- <label>Current Balance</label>  
     <p id="Balance"></p>
-    <p id="Purchases"></p>
+    <label>Purchases this week</label>  
+    <p id="Purchases"></p> -->
     
     <div class="Progress Bar">
     

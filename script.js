@@ -1,17 +1,43 @@
-// Enter BUdget
+// Enter Budget
 
 //let weeklyBudget;
 //let newbudget;
 
-document.querySelectorbyID("budget").addEventListener("click", saveBudget);
+document.querySelector("#budget").addEventListener("click", saveBudget);
 
-let weeklyBudget;
-let newbudget;
+let weeklyInput = document.querySelector("#newbudget");
+let updateWeeklyBudget = document.querySelector("#Weekly-Budget");
+
+let weeklyBudget = 0;
 
 function saveBudget(e) {
-    e.preventdefault();
-    weeklyBudget = newbudget;
-
+  e.preventDefault();
+  //console.log("having fun");
+  weeklyBudget = weeklyInput.value;
+  console.log(weeklyBudget);
+  updateWeeklyBudget.innerText = "$ " + weeklyBudget;
 }
 
-console.log(weeklyBudget)
+document.querySelector("#purchase").addEventListener("click", purchases);
+
+let purchaseName = document.querySelector("#name");
+
+let purchaseDescription = document.querySelector("#description");
+
+let purchasePrice = document.querySelector("#amount");
+
+let purchaseDate = document.querySelector("#date");
+
+let purchaseCategory = document.querySelector("#category");
+
+function purchases(e) {
+  e.preventDefault();
+  let addPurchase = {
+    purchase: purchaseName.value,
+    description: purchaseDescription.value,
+    amount: purchasePrice.value,
+    date: purchaseDate.value,
+    category: purchaseCategory.value,
+  };
+  console.log(addPurchase);
+}
