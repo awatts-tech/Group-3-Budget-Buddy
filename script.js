@@ -10,12 +10,13 @@ let updateWeeklyBudget = document.querySelector("#Weekly-Budget");
 
 let weeklyBudget = 0;
 
-function saveBudget(e) {
-  e.preventDefault();
-  //console.log("having fun");
-  weeklyBudget = weeklyInput.value;
-  console.log(weeklyBudget);
-  updateWeeklyBudget.innerText = "$ " + weeklyBudget;
+function saveBudget(e)
+{
+    e.preventDefault();
+    //console.log("having fun");
+    weeklyBudget = weeklyInput.value;
+    console.log(weeklyBudget);
+    updateWeeklyBudget.innerText = "$ " + weeklyBudget;
 }
 
 document.querySelector("#purchase").addEventListener("click", purchases);
@@ -30,14 +31,24 @@ let purchaseDate = document.querySelector("#date");
 
 let purchaseCategory = document.querySelector("#category");
 
-function purchases(e) {
-  e.preventDefault();
-  let addPurchase = {
-    purchase: purchaseName.value,
-    description: purchaseDescription.value,
-    amount: purchasePrice.value,
-    date: purchaseDate.value,
-    category: purchaseCategory.value,
-  };
-  console.log(addPurchase);
+// Charissa will work on completing this function
+function purchases(e)
+{
+    e.preventDefault();
+    let addPurchase = {
+        purchase: purchaseName.value,
+        description: purchaseDescription.value,
+        amount: purchasePrice.value,
+        date: purchaseDate.value,
+        category: purchaseCategory.value,
+    };
+    console.log(addPurchase);
+    
 }
+
+
+// Liz will complete the update balance function
+
+// Ashley will start research on the progress bar
+
+// Asia will work on the category table
