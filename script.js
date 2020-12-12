@@ -52,3 +52,43 @@ function purchases(e){
 // Ashley will start research on the progress bar
 
 // Asia will work on the category table
+
+
+// //Add purchase category and purchase amount entered by user into an array
+// var x = 0;
+// var array = Array();
+
+// function add_element_to_array(){
+//     array[x] = purchaseCategory.value;
+//     array[x] = purchaseAmount.value;
+//  x++;
+
+//  document.getElementById("category").value = "";
+//  document.getElementById("amount").value = "";
+// }
+
+// //Display purchase amount and category 
+// function display_array(){
+//    var e = "<hr/>";   
+    
+//    for (var y=0; y<array.length; y++){
+//        if (purchaseCategory == "Entertainment"){
+//            console.log(purchaseCatergory + purchaseAmount);
+//        }
+
+//         if (purchaseCategory == "Food"){
+//            console.log(purchaseCatergory + purchaseAmount);
+//        }
+
+//         if (purchaseCategory == "Clothing"){
+//            console.log(purchaseCatergory + purchaseAmount);
+//        }
+
+//         if (purchaseCategory == "Bills"){
+//           console.log(purchaseCatergory + purchaseAmount);
+
+//          }
+//     }
+
+
+// }
