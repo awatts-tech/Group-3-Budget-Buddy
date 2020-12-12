@@ -26,10 +26,15 @@ let purchaseDescription = document.querySelector("#description");
 let purchasePrice = document.querySelector("#amount");
 let purchaseDate = document.querySelector("#date");
 let purchaseCategory = document.querySelector("#category");
-let purchaseList = document.querySelector("#purchase-list"); 
 
-// Charissa will work on completing this function
-function purchases(e){
+
+// Charissa will work on completing this function - still trying to figure out why I am getting an error. 
+
+// let purchaseList = document.querySelector("#purchase-list");
+// purchaseList.appendChild(document.createElement('p'));
+// const addNewPurchase = document.createElement('p');
+function purchases(e)
+{
     e.preventDefault();
     let addPurchase = {
         purchase: purchaseName.value,
@@ -38,12 +43,12 @@ function purchases(e){
         date: purchaseDate.value,
         category: purchaseCategory.value,
     };
-    let addNewPurchase = document.createElement('p'); 
-    addNewPurchase.innerText = addPurchase.purchase + ' : $' + addPurchase.amount + " " + addPurchase.date; 
-    purchaseList.append(addNewPurchase);
-   console.log(addNewPurchase); 
+    // const addNewPurchase = document.createElement('p'); 
+    purchaseList.innerText = addPurchase.purchase + ' : $' + addPurchase.amount + " " + addPurchase.date;
+    // purchaseList.append(addNewPurchase);
+    console.log(addNewPurchase);
 
-    
+
 }
 
 
@@ -70,7 +75,7 @@ function purchases(e){
 // //Display purchase amount and category 
 // function display_array(){
 //    var e = "<hr/>";   
-    
+
 //    for (var y=0; y<array.length; y++){
 //        if (purchaseCategory == "Entertainment"){
 //            console.log(purchaseCatergory + purchaseAmount);
