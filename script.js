@@ -74,7 +74,7 @@ function purchases(e) {
 
   console.log(totalFood + "total food");
 
-}
+};
 
 // Liz will complete the update balance function
 // Added balance function to purchase function
@@ -86,6 +86,10 @@ function purchases(e) {
 //  console.log = "total purchases" + totalPurchases;
 //}
 
+// Ashley worked on the pop up alert 
+if (newBalance === weeklyBudget > 0) {
+  alert("Weekly budget consumed! Cannot purchase additional items.")
+};
 // Ashley will start research on the progress bar
 
 // Asia will work on the category table
