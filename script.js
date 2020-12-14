@@ -1,8 +1,5 @@
 // Enter Budget
 
-//const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
-
-
 let totalPurchases = 0;
 let purchaseArray = [];
 let newBalance = 0;
@@ -54,7 +51,7 @@ function purchases(e) {
     addPurchase.purchase + " : $" + addPurchase.amount + " " + addPurchase.date;
   purchaseList.append(addNewPurchase);
   console.log(addNewPurchase);
-  //console.log(newBalance);
+  
   newBalance = newBalance - addPurchase.amount;
   console.log("balance" + newBalance);
   totalPurchases = totalPurchases + parseInt(addPurchase.amount);
