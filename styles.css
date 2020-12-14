@@ -1,4 +1,57 @@
 /* Charissa will find color pallate and send to group */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:rgba(178, 190, 181, .1); 
+}
+.banner {
+    display: inline;
+    background-color: #ccdb86;
+    padding: .5rem;
+    border: none;
+    border-radius: .5rem;
+}
+
+h1 {
+    font-size: large;
+    text-align: center;
+    color: #003700;
+    background-color: #ccdb86;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.budget {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    /* background-color:#ccdb86; */
+    border-radius: .5rem;
+    border: none;
+}
+
+label {
+    font-size: medium;
+    font-weight: bold;
+    color: #003700;
+    padding: .3rem;
+}
+button {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    background-color: #67a030;
+    color: #dce0cd;
+    border: none;
+    padding: .25rem;
+    border-radius: .3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+#track, #newbudget {
+    margin: .5rem;
+}
 
 /* do we want an image logo? */
 
