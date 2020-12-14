@@ -57,3 +57,20 @@ button {
 
 /* refer to the auto loan pre work app with rounded corners and clean lines */
 
+/* styling for table */
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    margin: 50px auto;
+
+}
+
+table, th, td{
+    border: 2px solid black;
+    padding: 5px;
+}
+
+th{ 
+    font-size: 15px;
+}

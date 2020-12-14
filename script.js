@@ -90,40 +90,31 @@ function purchases(e) {
 
 // Asia will work on the category table
 
-// //Add purchase category and purchase amount entered by user into an array
-// var x = 0;
-// var array = Array();
+var entry = document.getElementById("submit");
+entry.addEventListener("click", displayCategoryDetails);
 
-// function add_element_to_array(){
-//     array[x] = purchaseCategory.value;
-//     array[x] = purchaseAmount.value;
-//  x++;
+var row = 1;
+function displayCategoryDetails(){
+  var purchaseCategory = document.getElementById("category").value;
+  var purchaseAmount = document.getElementById("amount").value;
 
-//  document.getElementById("category").value = "";
-//  document.getElementById("amount").value = "";
-// }
 
-// //Display purchase amount and category
-// function display_array(){
-//    var e = "<hr/>";
 
-//    for (var y=0; y<array.length; y++){
-//        if (purchaseCategory == "Entertainment"){
-//            console.log(purchaseCatergory + purchaseAmount);
-//        }
+//create table
+var display = document.getElementById("display");
+//add new row
+var newRow = display.insertRow(row);
+//create cells
+var cell1 = newRow.insertCell(0);
+var cell2 = newRow.insertCell(1);
+// var cell3 = newRow.insertCell(2);
 
-//         if (purchaseCategory == "Food"){
-//            console.log(purchaseCatergory + purchaseAmount);
-//        }
+cell1.innerHTML= purchaseCategory;
+cell2.innerHTML = purchaseAmount;
+// cell3.innerHTML = "";
 
-//         if (purchaseCategory == "Clothing"){
-//            console.log(purchaseCatergory + purchaseAmount);
-//        }
+row++
 
-//         if (purchaseCategory == "Bills"){
-//           console.log(purchaseCatergory + purchaseAmount);
+}
 
-//          }
-//     }
 
-// }
