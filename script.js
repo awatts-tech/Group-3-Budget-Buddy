@@ -87,7 +87,7 @@ function purchases(e) {
 //}
 
 // Ashley worked on the pop up alert 
-if (newBalance === weeklyBudget > 0) {
+if (totalPurchases === weeklyBudget > 0) {
   alert("Weekly budget consumed! Cannot purchase additional items.")
 };
 // Ashley will start research on the progress bar
