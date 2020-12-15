@@ -1,23 +1,28 @@
 /* Charissa will find color pallate and send to group */
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color:rgba(178, 190, 181, .1); 
+    font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    /* background: linear-gradient(#9ff5a2);  */
 }
-.banner {
+/* .banner {
     display: inline;
     background-color: #ccdb86;
     padding: .5rem;
     border: none;
     border-radius: .5rem;
-}
+} */
+#budget-section {
+    
+    background: linear-gradient(#9ff5a2, #c9f5ca);
+    background-attachment: fixed;
 
+}
 h1 {
     font-size: large;
     text-align: center;
     color: #003700;
-    background-color: #ccdb86;
-    padding: .5rem;
-    border-radius: .5rem;
+    /* background-color: #ccdb86; */
+    /* padding: .5rem;
+    border-radius: .5rem; */
 }
 
 .budget {
