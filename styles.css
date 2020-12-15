@@ -1,7 +1,6 @@
 /* Charissa will find color pallate and send to group */
 body {
-    font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
-    /* background: linear-gradient(#9ff5a2);  */
+  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
 }
 /* .banner {
     display: inline;
@@ -11,116 +10,207 @@ body {
     border-radius: .5rem;
 } */
 #budget-icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: .5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
 }
 #budget-section {
-    background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
-    border: none;
-    border-radius: 1rem;
+  background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
+  border: none;
+  border-radius: 1rem;
 }
 h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    color: #003700;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #003700;
 }
 
 .budget {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: .5rem;
-    border-radius: .5rem;
-    border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
 }
 
 #track {
-    font-size: 1rem;
-    font-weight: bold;
-    padding-left: .25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 0.25rem;
 }
 #newbudget {
-    width: 180px;
-    height: 25px;
-    padding-left: .2rem;
-    border-radius: 3px;
+  width: 180px;
+  height: 25px;
+  padding-left: 0.2rem;
+  border-radius: 3px;
 }
 #budget-label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    padding-top: .5rem;
-    padding-bottom: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
 }
 #Weekly-Budget {
-    font-size: 2rem;
-    font-weight: bold;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    color: #355723;
-    padding: 0rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: #355723;
+  padding: 0rem;
 }
 button {
-    font-size: small;
-    font-weight: bold;
-    text-align: center;
-    background-color: #92d36e;
-    border: none;
-    padding: .25rem;
-    border-radius: 3px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 120px;
-    height: 30px;
+  font-size: small;
+  text-align: center;
+  background-color: #92d36e;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 3px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 120px;
+  height: 30px;
+  /* add shadowing to buttons */
 }
 #newbudget {
-    margin: .5rem;
+  margin: 0.5rem;
 }
 .purchase {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 #new-purchase-label {
-    font-size: 1rem;
-    font-weight: bold;
-    padding-left: .5rem;
-    padding-top: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
 }
 #purchase-form {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 7px;
-    justify-content: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 7px;
+  justify-content: flex-start;
 }
 .purchase-input {
-    width: 180px;
-    height: 32px;
-    margin: 2px;
-    border-radius: 3px;
-
+  width: 180px;
+  height: 32px;
+  margin: 2px;
+  border-radius: 3px;
 }
 #date {
-    width: 182px;
+  width: 182px;
 }
 #category {
-    width: 187px;
-    height: 32px;
+  width: 187px;
+  height: 32px;
 }
 #purchase {
-    margin-left: 30px;
-    width: 160px;
-    height: 32px;
+  margin-left: 30px;
+  width: 160px;
+  height: 32px;
+}
+#balance-display {
+  background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
+  border: none;
+  border-radius: 1rem;
+  width: auto;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+#balance-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#Balance {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #355723;
+  margin-top: 10px;
+  margin-left: 30%;
+}
+#progress-bar {
+  background-color: #7de8ea;
+  height: 50px;
+  margin-top: 10px;
+}
+#Totals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  text-indent: 10px;
+  display: none;
+}
+#header-cat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
+  border: none;
+  border-radius: .5rem;
+  margin-top: 15px;
+  height: 50px;
+}
+#transaction-icon {
+  margin-left: 15px;
+  /* margin-top: 5px; */
+}
+#cat-tot {
+  margin-right: 55%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#food-cat {
+    background: linear-gradient(to bottom, #7de8ea, #daf4f5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%; 
+}
+#entertain-cat {
+    background: linear-gradient(to bottom, #d6dfb5, #d6dfb50a);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+#bills-cat {
+    background: linear-gradient(to bottom, #ccdb86, #cbdb8631);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+#clothes-cat {
+    background: linear-gradient(to bottom, #67a030, #66a03021);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
+}
+#tot-cat {
+    background: linear-gradient(to bottom, #003700, #0037006c); 
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10%;
 }
 /* do we want an image logo? */
 

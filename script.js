@@ -37,7 +37,7 @@ function saveBudget(e) {
   //console.log("having fun");
   weeklyBudget = weeklyInput.value;
   // console.log(weeklyBudget + "budget");
-  updateWeeklyBudget.innerText = "$ " + weeklyBudget;
+  updateWeeklyBudget.innerText = "$" + weeklyBudget;
   newBalance = weeklyBudget;
   // weeklyInput.value = '';
   // console.log(newBalance + "balance");
@@ -101,6 +101,21 @@ function updateBalance() {
     alert("Weekly budget consumed! Cannot purchase additional items.");
   }
 }
+
+// display totals by category on click
+
+document.querySelector("#transaction-page").addEventListener('click', function (event)
+{
+  
+    const transactions = document.querySelector('#Totals');
+    const budgetSection = document.querySelector ('#budget-section'); 
+    const purchaseSection = document.querySelector('.purchase'); 
+    Totals.style.display = 'flex';
+    budgetSection.style.display = 'none'; 
+    purchaseSection.style.display = 'none'; 
+
+    event.preventDefault();
+})
 // function updateSpendTotal () {
 //     totalSpend = 0; 
 //     for (let i=-0; i < totalPurchases.length; i++) {

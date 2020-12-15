@@ -22,9 +22,7 @@
 
     <nav class="banner">
       <a href="index.html" class="nav-links" id="home-page">Home</a>
-      <a href="index2.html" class="nav-links" id="transaction-page"
-        >Transactions</a
-      >
+      <a href="index2.html" class="nav-links" id="transaction-page">Transactions</a>
     </nav>
 
     <h1>budget buddy</h1>
@@ -89,30 +87,43 @@
       </form>
     </div>
 
-    <label>Current Balance</label>
+    <section id="balance-display">
+    <label id="balance-label">Here's your balance</label>
     <p id="Balance"></p>
+  </section>
 
     <!-- <label>Total Spend Amount</label>  
     <p id="total-spend"></p> -->
 
-    <div class="Progress Bar"></div>
+    <div class="Progress Bar" id="progress-bar"> placeholder for styling purposes </div>
 
     <!-- <label>Purchases this week</label>
     <div id="purchase-list"></div> -->
 
     <div id="Totals">
+      <div id="header-cat">
+      <img src="transaction.png" alt="transaction icon" id="transaction-icon">
+      <p id="cat-tot">Category totals</p>
+    </div>
+      <div id="food-cat">
       <p>Total Food Purchases</p>
-      <p id="Food"></p>
-
+      <p id="Food"></p></div>
+<div id="entertain-cat">
       <p>Total Entertainment Purchases</p>
       <p id="Entertainment"></p>
-
+    </div>
+    <div id="bills-cat">
       <p>Total Bills Paid</p>
       <p id="Bills"></p>
+    </div>
+    <div id="clothes-cat">
       <p>Total Clothing Purchases</p>
       <p id="Clothing"></p>
+    </div>
+    <div id="tot-cat">
       <p>Total Purchases Made</p>
       <p id="addTotal"></p>
+    </div>
     </div>
 
     <script src="script.js" async="false"></script>
