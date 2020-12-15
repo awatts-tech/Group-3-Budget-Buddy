@@ -64,6 +64,8 @@ function purchases(e) {
   //   console.log("balance" + newBalance);
   //   newBalance.innerText = '$' + newBalance;
   totalPurchases = totalPurchases + parseInt(addPurchase.amount);
+  totalTotal.innerText = "$" + totalPurchases;
+  
   console.log("total purchases" + totalPurchases);
   switch (addPurchase.category) {
     case "Food":
@@ -83,7 +85,8 @@ function purchases(e) {
     case "Entertainment":
       totalEntertainment = totalEntertainment + parseInt(addPurchase.amount);
       addEntertainmentTotal.innerText = "$" + totalEntertainment;
-      
+         
+
       console.log(totalFood + "total food");
   }
   updateBalance();
