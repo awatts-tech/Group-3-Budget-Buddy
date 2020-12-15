@@ -52,7 +52,16 @@ button {
 #track, #newbudget {
     margin: .5rem;
 }
-
+.purchase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    /* background-color:#ccdb86; */
+    border-radius: .5rem;
+    border: none;
+}
 /* do we want an image logo? */
 
 /* refer to the auto loan pre work app with rounded corners and clean lines */
