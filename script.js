@@ -24,6 +24,7 @@ let addFoodTotal = document.querySelector("#Food");
 let addBillsTotal = document.querySelector("#Bills");
 let addClothingTotal = document.querySelector("#Clothing");
 let addEntertainmentTotal = document.querySelector("#Entertainment");
+let totalTotal = document.querySelector("#addTotal");
 
 
 
