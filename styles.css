@@ -74,7 +74,7 @@ button {
     font-size: small;
     font-weight: bold;
     text-align: center;
-    background-color: #67a030;
+    background-color: #92d36e;
     border: none;
     padding: .25rem;
     border-radius: 3px;
@@ -88,13 +88,39 @@ button {
 }
 .purchase {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: .5rem;
-    /* background-color:#ccdb86; */
-    border-radius: .5rem;
-    border: none;
+    flex-flow: row wrap;
+    justify-content: flex-start
+}
+#new-purchase-label {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: .5rem;
+    padding-top: .5rem;
+}
+#purchase-form {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 7px;
+    justify-content: flex-start;
+}
+.purchase-input {
+    width: 180px;
+    height: 32px;
+    margin: 2px;
+    border-radius: 3px;
+
+}
+#date {
+    width: 182px;
+}
+#category {
+    width: 187px;
+    height: 32px;
+}
+#purchase {
+    margin-left: 30px;
+    width: 160px;
+    height: 32px;
 }
 /* do we want an image logo? */
 

@@ -41,7 +41,7 @@
             type="number"
             placeholder="Weekly Budget"
           />
-          <button class="submit" , id="budget">Save Budget</button>
+          <button class="submit" , id="budget">save budget</button>
         </form>
         <label id="budget-label">my budget</label>
         <p id="Weekly-Budget"></p>
@@ -49,47 +49,43 @@
     </section>
 
     <div class="purchase">
-      <label> Enter new Purchases </label>
+      <label id="new-purchase-label"> Track your purchases </label>
 
-      <form>
+      <form id="purchase-form">
         <input
-          class="input"
-          ,
+          class="purchase-input"
           id="name"
           type="text"
           placeholder="Purchase Name"
           required
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="description"
           type="text"
           placeholder="Purchase Description"
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="amount"
           type="number"
           placeholder="Purchase Amount"
           required
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="date"
           type="date"
           placeholder="Purchase Date"
           required
         />
-        <select id="category">
+        <select class="purchase-input" id="category">
           <option>Food</option>
           <option>Entertainment</option>
           <option selected="">Bills</option>
           <option>Clothing</option>
         </select>
-        <button class="submit" , id="purchase">Add Purchase</button>
+        <button class="submit" , id="purchase">add purchase</button>
       </form>
     </div>
 
