@@ -94,7 +94,7 @@ function purchases(e) {
 }
 
 function updateBalance() {
-  newBalance = newBalance - totalPurchases;
+  newBalance = weeklyBudget - totalPurchases;
   console.log(newBalance);
   remainingBalance.innerText = "$" + newBalance;
   if (newBalance <= 0) {
