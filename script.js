@@ -19,6 +19,7 @@ let purchaseDate = document.querySelector("#date");
 let purchaseCategory = document.querySelector("#category");
 let purchaseList = document.querySelector("#purchase-list");
 let remainingBalance = document.querySelector("#Balance");
+// let totalSpend = document.querySelector('#total-spend');
 
 let addFoodTotal = document.querySelector("#Food");
 let addBillsTotal = document.querySelector("#Bills");
@@ -93,10 +94,19 @@ function updateBalance() {
   newBalance = newBalance - totalPurchases;
   console.log(newBalance);
   remainingBalance.innerText = "$" + newBalance;
-  if (totalPurchases === newBalance > 0) {
+  if (newBalance <= 0) {
     alert("Weekly budget consumed! Cannot purchase additional items.");
   }
 }
+// function updateSpendTotal () {
+//     totalSpend = 0; 
+//     for (let i=-0; i < totalPurchases.length; i++) {
+//         totalSpend += totalPurchases[i];
+//     }
+//     totalSpend.innerText = '$' + totalSpend;
+//     updateBalance();
+// }
+
 // Liz will complete the update balance function
 // Added balance function to purchase function
 
