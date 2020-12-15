@@ -10,51 +10,80 @@ body {
     border: none;
     border-radius: .5rem;
 } */
+#budget-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+}
 #budget-section {
-    
-    background: linear-gradient(#9ff5a2, #c9f5ca);
-    background-attachment: fixed;
-
+    background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
+    border: none;
+    border-radius: 1rem;
 }
 h1 {
-    font-size: large;
+    font-size: 1.5rem;
     text-align: center;
     color: #003700;
-    /* background-color: #ccdb86; */
-    /* padding: .5rem;
-    border-radius: .5rem; */
 }
 
 .budget {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     padding: .5rem;
-    /* background-color:#ccdb86; */
     border-radius: .5rem;
     border: none;
 }
 
-label {
-    font-size: medium;
+#track {
+    font-size: 1rem;
     font-weight: bold;
-    color: #003700;
-    padding: .3rem;
+    padding-left: .25rem;
+}
+#newbudget {
+    width: 180px;
+    height: 25px;
+    padding-left: .2rem;
+    border-radius: 3px;
+}
+#budget-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-top: .5rem;
+    padding-bottom: 0rem;
+}
+#Weekly-Budget {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: #355723;
+    padding: 0rem;
 }
 button {
     font-size: small;
     font-weight: bold;
     text-align: center;
     background-color: #67a030;
-    color: #dce0cd;
     border: none;
     padding: .25rem;
-    border-radius: .3rem;
+    border-radius: 3px;
     padding-left: 1rem;
     padding-right: 1rem;
+    width: 145px;
+    height: 30px;
 }
-#track, #newbudget {
+#newbudget {
     margin: .5rem;
 }
 .purchase {
