@@ -20,6 +20,13 @@ let purchaseCategory = document.querySelector("#category");
 let purchaseList = document.querySelector("#purchase-list");
 let remainingBalance = document.querySelector("#Balance");
 
+let addFoodTotal = document.querySelector("#Food");
+let addBillsTotal = document.querySelector("#Bills");
+let addClothingTotal = document.querySelector("#Clothing");
+let addEntertainmentTotal = document.querySelector("#Entertainment");
+
+
+
 document.querySelector("#budget").addEventListener("click", saveBudget);
 document.querySelector("#purchase").addEventListener("click", purchases);
 
@@ -46,9 +53,9 @@ function purchases(e) {
   };
   purchaseArray.push(addPurchase);
   let addNewPurchase = document.createElement("p");
-  addNewPurchase.innerText =
-    addPurchase.purchase + " : $" + addPurchase.amount + " " + addPurchase.date;
-  purchaseList.append(addNewPurchase);
+  // addNewPurchase.innerText =
+  //   addPurchase.purchase + " : $" + addPurchase.amount + " " + addPurchase.date;
+  // purchaseList.append(addNewPurchase);
   console.log(addNewPurchase);
   //console.log(newBalance);
   //   newBalance = newBalance - addPurchase.amount;
@@ -59,12 +66,22 @@ function purchases(e) {
   switch (addPurchase.category) {
     case "Food":
       totalFood = totalFood + parseInt(addPurchase.amount);
+      addFoodTotal.innerText = "$" + totalFood;  
+      break;
+
     case "Bills":
       totalBills = totalBills + parseInt(addPurchase.amount);
+      addBillsTotal.innerText = "$" + totalBills;  
+
+      break;
     case "Clothing":
       totalClothing = totalClothing + parseInt(addPurchase.amount);
+      addClothingTotal.innerText = "$" + totalClothing;
+      break;
     case "Entertainment":
       totalEntertainment = totalEntertainment + parseInt(addPurchase.amount);
+      addEntertainmentTotal.innerText = "$" + totalEntertainment;
+      
       console.log(totalFood + "total food");
   }
   updateBalance();
@@ -96,28 +113,4 @@ function updateBalance() {
 // };
 // Ashley will start research on the progress bar
 
-// Asia will work on the category table
-
-var entry = document.getElementById("submit");
-entry.addEventListener("click", displayCategoryDetails);
-
-var row = 1;
-function displayCategoryDetails() {
-  var purchaseCategory = document.getElementById("category").value;
-  var purchaseAmount = document.getElementById("amount").value;
-
-  //create table
-  var display = document.getElementById("display");
-  //add new row
-  var newRow = display.insertRow(row);
-  //create cells
-  var cell1 = newRow.insertCell(0);
-  var cell2 = newRow.insertCell(1);
-  // var cell3 = newRow.insertCell(2);
-
-  cell1.innerHTML = purchaseCategory;
-  cell2.innerHTML = purchaseAmount;
-  // cell3.innerHTML = "";
-
-  row++;
-}
+// Asia will work on the category table - 
