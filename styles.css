@@ -62,6 +62,15 @@ button {
     border-radius: .5rem;
     border: none;
 }
+
+#Progress-Bar {
+    width: 1%;
+    height: 35px; 
+    background-color: #4CAF50; 
+    text-align: center; 
+    line-height: 32px; 
+    color: black;
+}
 /* do we want an image logo? */
 
 /* refer to the auto loan pre work app with rounded corners and clean lines */

@@ -101,6 +101,40 @@ function updateBalance() {
     alert("Weekly budget consumed! Cannot purchase additional items.");
   }
 }
+
+let count = totalPurchases;
+let countmax = weeklyBudget;
+let progressbar;
+
+function start(max) {
+    count = 0;
+    countmax = max;
+    progressbar = document.querySelector("#Progress-Bar");
+    progressbar.max = weeklyBudget;
+}
+function update() {
+    count = totalPurchases;
+    progressbar.value = count;
+    if (count >= countmax) {
+        progressbar.value = 0;
+    }
+}
+
+
+// function progressBar() { 
+  // var element = document.querySelector("#Progress-Bar");    
+  // var width = 1; 
+  // var identity = setInterval(scene, 10); 
+  // function scene() { 
+  //   if (width >= 100) { 
+  //     clearInterval(identity); 
+  //   } else { 
+  //     width++;  
+  //     element.style.width = width + '%';  
+  //   } 
+  // }
+//}
+
 // function updateSpendTotal () {
 //     totalSpend = 0; 
 //     for (let i=-0; i < totalPurchases.length; i++) {
