@@ -145,3 +145,4 @@ document.querySelector("#transaction-page").addEventListener('click', function (
 // Ashley will start research on the progress bar
 
 // Asia will work on the category table - 
+
