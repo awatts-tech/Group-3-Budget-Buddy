@@ -37,7 +37,7 @@ function saveBudget(e) {
   //console.log("having fun");
   weeklyBudget = weeklyInput.value;
   // console.log(weeklyBudget + "budget");
-  updateWeeklyBudget.innerText = "$ " + weeklyBudget;
+  updateWeeklyBudget.innerText = "$" + weeklyBudget;
   newBalance = weeklyBudget;
   // weeklyInput.value = '';
   // console.log(newBalance + "balance");
@@ -94,7 +94,7 @@ function purchases(e) {
 }
 
 function updateBalance() {
-  newBalance = newBalance - totalPurchases;
+  newBalance = weeklyBudget - totalPurchases;
   console.log(newBalance);
   remainingBalance.innerText = "$" + newBalance;
   if (newBalance <= 0) {
@@ -102,39 +102,58 @@ function updateBalance() {
   }
 }
 
-let count = totalPurchases;
-let countmax = weeklyBudget;
-let progressbar;
-
-function start(max) {
-    count = 0;
-    countmax = max;
-    progressbar = document.querySelector("#Progress-Bar");
-    progressbar.max = weeklyBudget;
-}
-function update() {
-    count = totalPurchases;
-    progressbar.value = count;
-    if (count >= countmax) {
-        progressbar.value = 0;
+var i = 0;
+function progressBar() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.querySelector("#Progress-Bar");
+    var width = 10;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
     }
+  }
 }
 
+// let count = totalPurchases;
+// let countmax = weeklyBudget;
+// let progressbar;
 
-// function progressBar() { 
-  // var element = document.querySelector("#Progress-Bar");    
-  // var width = 1; 
-  // var identity = setInterval(scene, 10); 
-  // function scene() { 
-  //   if (width >= 100) { 
-  //     clearInterval(identity); 
-  //   } else { 
-  //     width++;  
-  //     element.style.width = width + '%';  
-  //   } 
-  // }
-//}
+// function start(max) {
+//     count = 0;
+//     countmax = max;
+//     progressbar = document.querySelector("#Progress-Bar");
+//     progressbar.max = weeklyBudget;
+// }
+// function update() {
+//     count = totalPurchases;
+//     progressbar.value = count;
+//     if (count >= countmax) {
+//         progressbar.value = 0;
+//     }
+// }
 
+// display totals by category on click
+
+document.querySelector("#transaction-page").addEventListener('click', function (event)
+{
+  
+    const transactions = document.querySelector('#Totals');
+    const budgetSection = document.querySelector ('#budget-section'); 
+    const purchaseSection = document.querySelector('.purchase'); 
+    Totals.style.display = 'flex';
+    budgetSection.style.display = 'none'; 
+    purchaseSection.style.display = 'none'; 
+
+    event.preventDefault();
+})
 // function updateSpendTotal () {
 //     totalSpend = 0; 
 //     for (let i=-0; i < totalPurchases.length; i++) {

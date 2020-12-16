@@ -25,104 +25,113 @@
       <a href="index2.html" class="nav-links" id="transaction-page">Transactions</a>
     </nav>
 
-    <h1>Budget Buddies</h1>
-
-    <div class="budget">
-      <label id="track">Let's start tracking your budget:</label>
-      <form>
-        <input
-          class="input"
-          ,
-          id="newbudget"
-          type="number"
-          placeholder="Weekly Budget"
-        />
-        <button class="submit" , id="budget">Save Budget</button>
-      </form>
-    </div>
+    <h1>budget buddy</h1>
+    <section id="budget-section">
+      <img src="budget.png" alt="budget-icon" id="budget-icon" />
+      <div class="budget">
+        <label class="budget-label" id="track"
+          >Let's start tracking your budget</label>
+        <form>
+          <input
+            class="input"
+            ,
+            id="newbudget"
+            type="number"
+            placeholder="Weekly Budget"
+          />
+          <button class="submit" , id="budget">save budget</button>
+        </form>
+        <label id="budget-label">my budget</label>
+        <p id="Weekly-Budget"></p>
+      </div>
+    </section>
 
     <div class="purchase">
-      <label> Enter new Purchases </label>
+      <label id="new-purchase-label"> Track your purchases </label>
 
-      <form>
+      <form id="purchase-form">
         <input
-          class="input"
-          ,
+          class="purchase-input"
           id="name"
           type="text"
           placeholder="Purchase Name"
           required
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="description"
           type="text"
           placeholder="Purchase Description"
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="amount"
           type="number"
           placeholder="Purchase Amount"
           required
         />
         <input
-          class="input"
-          ,
+        class="purchase-input"
           id="date"
           type="date"
           placeholder="Purchase Date"
           required
         />
-        <select id="category">
+        <select class="purchase-input" id="category">
           <option>Food</option>
           <option>Entertainment</option>
           <option selected="">Bills</option>
           <option>Clothing</option>
         </select>
-        <button class="submit" , id="purchase">Add Purchase</button>
+        <button class="submit" , id="purchase">add purchase</button>
       </form>
     </div>
 
-    <label>My Budget</label>
-    <p id="Weekly-Budget"></p>
-
-    <label>Current Balance</label>
+    <section id="balance-display">
+    <label id="balance-label">Here's your balance</label>
     <p id="Balance"></p>
+  </section>
 
     <!-- <label>Total Spend Amount</label>  
     <p id="total-spend"></p> -->
 
-    <div id="Progress-Bar" value="0"></div>
+    <!-- <div id="Progress-Bar" value="0"></div> -->
+      <h4> Check your progress </h4>
+      <div id="myProgress">
+        <div class="Progress Bar" id="Progress-Bar"> Balance </div>
+      </div>
+      <br>
+    <button onclick="progressBar()">Click Me</button> 
 
-    <!-- <div id = "Progress_Status"> 
-    <div id= "Progress-Bar"></div>
-    </div> -->
 
     <!-- <label>Purchases this week</label>
     <div id="purchase-list"></div> -->
 
-
-<div id = "Totals">
-  <p>Total Food Purchases </p>
-  <p id="Food"></p>
-  
-  <p> Total Entertainment Purchases</p>
-  <p id="Entertainment"></p>
-
-  <p> Total Bills Paid</p>
-  <p id= "Bills"></p>
-  <p> Total Clothing Purchases </p>
-  <p id = "Clothing"></p>
-  <p> Total Purchases Made </p>
-  <p id = "addTotal"></p>
-
-</div>
-
-
-
+    <div id="Totals">
+      <div id="header-cat">
+      <img src="transaction.png" alt="transaction icon" id="transaction-icon">
+      <p id="cat-tot">Category totals</p>
+    </div>
+      <div id="food-cat">
+      <p>Total Food Purchases</p>
+      <p id="Food"></p></div>
+<div id="entertain-cat">
+      <p>Total Entertainment Purchases</p>
+      <p id="Entertainment"></p>
+    </div>
+    <div id="bills-cat">
+      <p>Total Bills Paid</p>
+      <p id="Bills"></p>
+    </div>
+    <div id="clothes-cat">
+      <p>Total Clothing Purchases</p>
+      <p id="Clothing"></p>
+    </div>
+    <div id="tot-cat">
+      <p>Total Purchases Made</p>
+      <p id="addTotal"></p>
+    </div>
+    </div>
 
     <script src="script.js" async="false"></script>
   </body>
