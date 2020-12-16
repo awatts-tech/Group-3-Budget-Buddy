@@ -102,21 +102,21 @@ function updateBalance() {
   }
 }
 
-var i = 0;
+let i = 0;
 function progressBar() {
   if (i == 0) {
-    i = 1;
-    var elem = document.querySelector("#Progress-Bar");
-    var width = 10;
-    var id = setInterval(frame, 10);
+    i = weeklyBudget;
+    let bar = document.querySelector("#Progress-Bar");
+    let width = 10;
+    let id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
         i = 0;
       } else {
         width++;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";
+        bar.style.width = width + "%";
+        bar.innerHTML = width + "%";
       }
     }
   }
@@ -148,9 +148,11 @@ document.querySelector("#transaction-page").addEventListener('click', function (
     const transactions = document.querySelector('#Totals');
     const budgetSection = document.querySelector ('#budget-section'); 
     const purchaseSection = document.querySelector('.purchase'); 
+    const progressBar = document.querySelector('#progress-bar');
     Totals.style.display = 'flex';
     budgetSection.style.display = 'none'; 
     purchaseSection.style.display = 'none'; 
+    progressBar.style.display = 'none'; 
 
     event.preventDefault();
 })
@@ -181,3 +183,4 @@ document.querySelector("#transaction-page").addEventListener('click', function (
 // Ashley will start research on the progress bar
 
 // Asia will work on the category table - 
+
