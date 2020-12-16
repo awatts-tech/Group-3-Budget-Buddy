@@ -110,9 +110,11 @@ document.querySelector("#transaction-page").addEventListener('click', function (
     const transactions = document.querySelector('#Totals');
     const budgetSection = document.querySelector ('#budget-section'); 
     const purchaseSection = document.querySelector('.purchase'); 
+    const progressBar = document.querySelector('#progress-bar');
     Totals.style.display = 'flex';
     budgetSection.style.display = 'none'; 
     purchaseSection.style.display = 'none'; 
+    progressBar.style.display = 'none'; 
 
     event.preventDefault();
 })

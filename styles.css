@@ -1,14 +1,33 @@
 /* Charissa will find color pallate and send to group */
 body {
   font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  background-color: whitesmoke;
 }
-/* .banner {
-    display: inline;
-    background-color: #ccdb86;
-    padding: .5rem;
-    border: none;
-    border-radius: .5rem;
+.banner {
+  display: inline;
+  /* background: linear-gradient(to top, #67a030, #66a03021); */
+  padding: 0.5rem;
+  /* border: solid olive 1px; */
+  /* border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem */
+}
+/* .nav-links {
+    text-decoration: underline;
+    color: #003700; 
 } */
+a {
+  display: block;
+  float: left;
+  padding: 5px 5px;
+  background: linear-gradient(to top, #67a030, #66a03021);
+  border: 1px solid #67a030;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  margin-right: 1px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px
+}
 #budget-icon {
   display: block;
   margin-left: auto;
@@ -19,11 +38,13 @@ body {
   background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
   border: none;
   border-radius: 1rem;
+  margin-bottom: 10px;
 }
 h1 {
   font-size: 1.5rem;
   text-align: center;
   color: #003700;
+  text-shadow: 1px 1px 2px gray;
 }
 
 .budget {
@@ -62,6 +83,7 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   display: block;
+  text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0rem;
@@ -80,8 +102,10 @@ button {
   padding-right: 1rem;
   width: 120px;
   height: 30px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* add shadowing to buttons */
 }
+
 #newbudget {
   margin: 0.5rem;
 }
@@ -89,6 +113,8 @@ button {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  /* border: solid darkgray 1px; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #new-purchase-label {
   font-size: 1rem;
@@ -99,8 +125,9 @@ button {
 #purchase-form {
   display: flex;
   flex-flow: row wrap;
-  padding: 7px;
+  padding: 2px;
   justify-content: flex-start;
+  margin: 1px;
 }
 .purchase-input {
   width: 180px;
@@ -129,6 +156,8 @@ button {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #balance-label {
   font-size: 1rem;
@@ -163,7 +192,8 @@ button {
   align-items: center;
   background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
   border: none;
-  border-radius: .5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   margin-top: 15px;
   height: 50px;
 }
@@ -172,46 +202,109 @@ button {
   /* margin-top: 5px; */
 }
 #cat-tot {
-  margin-right: 55%;
+  margin-right: 40%;
   font-size: 1rem;
   font-weight: bold;
 }
 #food-cat {
-    background: linear-gradient(to bottom, #7de8ea, #daf4f5);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 10%; 
+  background: linear-gradient(to bottom, #7de8ea, #daf4f5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 #entertain-cat {
-    background: linear-gradient(to bottom, #d6dfb5, #d6dfb50a);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 10%;
+  background: linear-gradient(to bottom, #d6dfb5, #d6dfb50a);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 #bills-cat {
-    background: linear-gradient(to bottom, #ccdb86, #cbdb8631);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 10%;
+  background: linear-gradient(to bottom, #ccdb86, #cbdb8631);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 #clothes-cat {
-    background: linear-gradient(to bottom, #67a030, #66a03021);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 10%;
+  background: linear-gradient(to bottom, #67a030, #66a03021);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
 }
 #tot-cat {
-    background: linear-gradient(to bottom, #003700, #0037006c); 
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 10%;
+  background: linear-gradient(to bottom, #003700, #0037006c);
+  color: white;
+  display: flex;
+  font-weight: bold;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10%;
 }
+
+@media screen and (min-width: 760px) {
+  #budget-section {
+    background: linear-gradient(to bottom, #aedd94 0%, #ebf7e4 100%);
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+  }
+  #track {
+    margin-left: 3rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  #newbudget {
+    margin-left: 3rem;
+  }
+  #budget {
+    margin-left: 2.5rem;
+  }
+  #budget-label {
+    position: absolute;
+    top: 13.5rem;
+    right: 20%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .purchase {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  #purchase-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .purchase-input {
+    width: 350px;
+  }
+  #date {
+    width: 355px;
+  }
+  #category {
+    width: 361px;
+  }
+  #purchase {
+    margin: 10px;
+  }
+  #new-purchase-label {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 10px;
+  }
+  #balance-display {
+    height: 60px;
+    margin-top: 10px;
+  }
+  #balance-label {
+    font-size: 1.25rem;
+  }
+}
+
 /* do we want an image logo? */
 
 /* refer to the auto loan pre work app with rounded corners and clean lines */
