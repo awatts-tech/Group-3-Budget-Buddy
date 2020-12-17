@@ -101,7 +101,7 @@ function updateBalance() {
 
 let i = 0;
 function progressBar() {
-  if (i == 0) {
+  
     i = weeklyBudget;
     let bar = document.querySelector("#Progress-Bar");
     let width = 0;
@@ -112,18 +112,17 @@ function progressBar() {
         i = 0;
       } else {
         debugger;
-
-        //logic to stop the bar growing
-        while (width < newBalance/weeklyBudget * 100)
-        {
+        // logic to stop the bar growing
+        while (width < newBalance/weeklyBudget * 100) {
           width++;
           bar.style.width = width + "%";
           bar.innerHTML = width + "%";
+          
+          
         }
       }
     }
     frame();
-  }
 }
 
 // let count = totalPurchases;
