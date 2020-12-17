@@ -27,8 +27,6 @@ let addClothingTotal = document.querySelector("#Clothing");
 let addEntertainmentTotal = document.querySelector("#Entertainment");
 let totalTotal = document.querySelector("#addTotal");
 
-
-
 document.querySelector("#budget").addEventListener("click", saveBudget);
 document.querySelector("#purchase").addEventListener("click", purchases);
 
@@ -65,17 +63,17 @@ function purchases(e) {
   //   newBalance.innerText = '$' + newBalance;
   totalPurchases = totalPurchases + parseInt(addPurchase.amount);
   totalTotal.innerText = "$" + totalPurchases;
-  
+
   console.log("total purchases" + totalPurchases);
   switch (addPurchase.category) {
     case "Food":
       totalFood = totalFood + parseInt(addPurchase.amount);
-      addFoodTotal.innerText = "$" + totalFood;  
+      addFoodTotal.innerText = "$" + totalFood;
       break;
 
     case "Bills":
       totalBills = totalBills + parseInt(addPurchase.amount);
-      addBillsTotal.innerText = "$" + totalBills;  
+      addBillsTotal.innerText = "$" + totalBills;
 
       break;
     case "Clothing":
@@ -85,7 +83,6 @@ function purchases(e) {
     case "Entertainment":
       totalEntertainment = totalEntertainment + parseInt(addPurchase.amount);
       addEntertainmentTotal.innerText = "$" + totalEntertainment;
-         
 
       console.log(totalFood + "total food");
   }
@@ -107,16 +104,22 @@ function progressBar() {
   if (i == 0) {
     i = weeklyBudget;
     let bar = document.querySelector("#Progress-Bar");
-    let width = 10;
+    let width = 0;
     let id = setInterval(frame, 10);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
         i = 0;
       } else {
-        width++;
-        bar.style.width = width + "%";
-        bar.innerHTML = width + "%";
+        debugger;
+
+        //logic to stop the bar growing
+        while (width < newBalance/weeklyBudget * 100)
+        {
+          width++;
+          bar.style.width = width + "%";
+          bar.innerHTML = width + "%";
+        }
       }
     }
   }
@@ -142,22 +145,22 @@ function progressBar() {
 
 // display totals by category on click
 
-document.querySelector("#transaction-page").addEventListener('click', function (event)
-{
-  
-    const transactions = document.querySelector('#Totals');
-    const budgetSection = document.querySelector ('#budget-section'); 
-    const purchaseSection = document.querySelector('.purchase'); 
-    const progressBar = document.querySelector('#progress-bar');
-    Totals.style.display = 'flex';
-    budgetSection.style.display = 'none'; 
-    purchaseSection.style.display = 'none'; 
-    progressBar.style.display = 'none'; 
+document
+  .querySelector("#transaction-page")
+  .addEventListener("click", function (event) {
+    const transactions = document.querySelector("#Totals");
+    const budgetSection = document.querySelector("#budget-section");
+    const purchaseSection = document.querySelector(".purchase");
+    const progressBar = document.querySelector("#progress-bar");
+    Totals.style.display = "flex";
+    budgetSection.style.display = "none";
+    purchaseSection.style.display = "none";
+    progressBar.style.display = "none";
 
     event.preventDefault();
-})
+  });
 // function updateSpendTotal () {
-//     totalSpend = 0; 
+//     totalSpend = 0;
 //     for (let i=-0; i < totalPurchases.length; i++) {
 //         totalSpend += totalPurchases[i];
 //     }
@@ -182,5 +185,4 @@ document.querySelector("#transaction-page").addEventListener('click', function (
 // };
 // Ashley will start research on the progress bar
 
-// Asia will work on the category table - 
-
+// Asia will work on the category table -
