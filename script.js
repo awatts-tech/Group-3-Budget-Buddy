@@ -105,7 +105,7 @@ function progressBar() {
     i = weeklyBudget;
     let bar = document.querySelector("#Progress-Bar");
     let width = 0;
-    let id = setInterval(frame, 10);
+    // let id = setTimeout(frame, 10);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
@@ -122,6 +122,7 @@ function progressBar() {
         }
       }
     }
+    frame();
   }
 }
 
